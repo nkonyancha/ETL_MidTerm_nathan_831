@@ -35,10 +35,10 @@ Saved to:
 
 ---
 
-## 🧰 Tools Used
+## Tools Used
 - Python 3.12
 - Pandas
-- Parquet (`pyarrow`)
+- Parquet 
 - Jupyter Notebook
 - Git & GitHub
 
