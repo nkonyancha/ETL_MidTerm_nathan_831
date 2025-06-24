@@ -36,7 +36,7 @@ Saved to:
 ---
 
 ## 🧰 Tools Used
-- Python 3.x
+- Python 3.12
 - Pandas
 - Parquet (`pyarrow`)
 - Jupyter Notebook
