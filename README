@@ -1,0 +1,52 @@
+# ETL Midterm Project – Nathan (831)
+
+## Project Overview
+This ETL project demonstrates the complete Extract → Transform → Load process using sales data. The goal is to ingest raw and incremental data, apply meaningful transformations, and store the final results in a structured Parquet format. This hands-on exercise showcases data wrangling, enrichment, cleaning, and categorization.
+
+
+## ETL Phases
+
+### 1. Extract (`etl_extract.ipynb`)
+- Loaded `raw_data.csv` and `incremental_data.csv`
+- Displayed `.head()` and `.info()` for both
+- Observed:
+  - Missing values in `quantity`, `unit_price`, and `region`
+- Saved raw copies to the `data/` folder
+
+### 2. Transform (`etl_transform.ipynb`)
+Performed the following on both datasets:
+
+-   Filled missing numeric values with mean
+-   dropped unessecary columns
+-   dropped duplicate rows
+-   Created `total_price = quantity × unit_price`
+-   Converted `order_date` to datetime
+
+Saved to:
+- `transformed/transformed_full.csv`
+- `transformed/transformed_incremental.csv`
+
+### 3. Load (`etl_load.ipynb`)
+- Loaded both transformed files into `.parquet` format using `pandas.to_parquet()`
+- Saved to `loaded/` directory:
+  - `full_data.parquet`
+  - `incremental_data.parquet`
+- Previewed data using `pd.read_parquet(...).head()`
+
+---
+
+## 🧰 Tools Used
+- Python 3.x
+- Pandas
+- Parquet (`pyarrow`)
+- Jupyter Notebook
+- Git & GitHub
+
+---
+
+## ▶️ How to Run the Project
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/nkonyancha/ETL_Midterm_nathan_831.git
+   cd ETL_Midterm_nathan_831
